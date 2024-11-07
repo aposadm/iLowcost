@@ -119,3 +119,26 @@ getent passwd aekkalak.phe@futuresky.local
 ```
 sudo login
 ```
+
+Steps to Unjoin (Leave) an Ubuntu System from AD Domain:
+
+```
+realm list
+```
+
+```
+realm leave futuresky.local
+```
+
+If you used sssd to authenticate, you may want to remove the configuration:
+
+```
+sudo rm /etc/sssd/sssd.conf
+```
+```
+sudo systemctl restart sssd
+```
+Remove Kerberos Configuration:
+```
+sudo rm /etc/krb5.conf
+```
