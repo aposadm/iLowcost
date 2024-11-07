@@ -101,7 +101,11 @@ To assign sudoers to groups
 
 ```
 chmod 640 /etc/sudoers
+```
+```
 vim /etc/sudoers
+```
+```
 %SudoAdmin@futuresky.local ALL=(ALL) ALL
 ```
 
